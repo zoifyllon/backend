@@ -1,60 +1,82 @@
-const pool = require('../utils/database');
 const InvariantError = require('../exceptions/InvariantError');
 const NotFoundError = require('../exceptions/NotFoundError');
+const prisma = require('../utils/database');
 
 async function addUserRepository({ name, email, password, imageUrl }) {
-  const [rows, fields] = await pool.execute(
-    'INSERT INTO users (name, email, password, image_url) VALUES (?, ?, ?, ?)',
-    [name, email, password, imageUrl],
-  );
+  const user = await prisma.users.create({
+    data: {
+      name, email, password, image_url: imageUrl
+    },
+    select: {
+      user_id: true,
+      name: true,
+      email: true,
+      image_url: true
+    }
+  });
 
-  return rows.insertId;
+  return user;
 }
 
 async function verifyUserEmail(email) {
-  const [ rows ] = await pool.execute(
-    'SELECT user_id FROM users WHERE email = ?',
-    [email],
-  );
+  const user = await prisma.users.findFirst({
+    where: { email: email }
+  })
 
-  if (rows.length > 0) {
-    throw new InvariantError('email is used')
+  if (user) {
+    throw new InvariantError('email is used');
   }
 }
 
 async function getUserIdRepository(id) {
-  const [rows, fields] = await pool.execute(
-    'SELECT user_id as id, name, email, image_url FROM users WHERE user_id = ?',
-    [id],
-  );
+  const user = await prisma.users.findUnique({
+    where: { user_id: id },
+    select: {
+      user_id: true,
+      name: true,
+      email: true,
+      image_url: true
+    }
+  });
 
-  if (rows.length === 0) {
-    throw new NotFoundError('user not found')
+  if (!user) {
+    throw new NotFoundError('user not found');
   }
 
-  return rows[0];
+  return user;
 }
 
 async function getUsersRepository() {
-  const [rows, fields] = await pool.execute(
-    'SELECT user_id as id, name, email, image_url FROM users'
-  );
+  const users = await prisma.users.findMany({
+    select: {
+      user_id: true,
+      name: true,
+      email: true,
+      image_url: true
+    }
+  });
 
-  return rows;
+  return users;
 }
 
 async function putUserRepository(id, { name, imageUrl }) {
-  await pool.execute(
-    'UPDATE users SET name = ?, image_url = ? WHERE user_id = ?',
-    [name, imageUrl, id],
-  );
+  await prisma.users.update({
+    where: {
+      user_id: id
+    },
+    data: {
+      name: name,
+      image_url: imageUrl,
+    }
+  });
 }
 
 async function deleteUserRepository(id) {
-  await pool.execute(
-    'DELETE FROM users WHERE user_id = ?',
-    [id],
-  );
+  await prisma.users.delete({
+    where: {
+      user_id: id
+    },
+  });
 }
 
 module.exports = {

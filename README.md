@@ -3,27 +3,20 @@
 ## isian .env
 
 ```
-MYSQL_HOST=localhost
-MYSQL_PORT=3306
-MYSQL_USER=root
-MYSQL_PASSWORD=root
-MYSQL_DATABASE=zoifyllon
-
-PORT=3000
-
-DATABASE_URL="mysql://root:root@localhost:3306/zoifyllon?schema=public"
-```
-
-## migrasi database
-
-```
-npx prisma migrate dev
+PORT
+DATABASE_URL="mysql://user:password@host:port/zoifyllon?schema=public"
 ```
 
 ## instalasi dependensi
 
 ```
 npm install
+```
+
+## migrasi database
+
+```
+npx prisma migrate dev
 ```
 
 ## menjalankan aplikasi

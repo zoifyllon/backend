@@ -1,17 +1,23 @@
 const AuthenticationError = require('../exceptions/AuthenticationError');
-const pool = require('../utils/database');
+const prisma = require('../utils/database');
 
 async function login(email) {
-  const [rows, fields] = await pool.execute(
-    'SELECT user_id as id, name, email, password, image_url FROM users WHERE email = ?',
-    [email]
-  );
+  const user = await prisma.users.findUnique({
+    where: { email },
+    select: {
+      user_id: true,
+      name: true,
+      email: true,
+      password: true,
+      image_url: true
+    }
+  });
 
-  if (rows.length === 0) {
+  if (!user) {
     throw new AuthenticationError('Invalid username or password')
   }
 
-  return rows[0];
+  return user;
 }
 
 module.exports = { login }
