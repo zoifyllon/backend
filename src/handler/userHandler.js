@@ -92,7 +92,7 @@ userHandler.put('/users/:userId', authMiddleware(), multer.single('imageFile'), 
 
     await putUserRepository(intUserId, { name, imageUrl });
   
-    // await ImgUpload.deleteFile(result.image_url);
+    await ImgUpload.deleteFile(result.image_url);
 
     res.status(200).json({
       message: 'Success',
@@ -117,7 +117,7 @@ userHandler.delete('/users/:userId', authMiddleware(), async (req, res, next) =>
 
     await deleteUserRepository(intUserId);
 
-    // await ImgUpload.deleteFile(result.image_url);
+    await ImgUpload.deleteFile(result.image_url);
   
     res.status(200).json({
       message: 'Success',
