@@ -1,0 +1,198 @@
+[
+  {
+    "name": "Apple Scab",
+    "symptoms": [
+      "Bintik-bintik kecil berwarna hijau zaitun pada daun",
+      "Berubah menjadi hitam kecoklatan dan menyatu membentuk bercak besar jaringan mati",
+      "Daun rontok sebelum waktunya, menyebabkan penggundulan",
+      "Lepuh dan retak pada pucuk, menjadi jalan masuk patogen lain"
+    ]
+  },
+  {
+    "name": "Black Rot",
+    "symptoms": [
+      "Bintik-bintik tidak beraturan pada daun, dibatasi garis gelap",
+      "Bintik-bintik juga pada tunas, batang, dan tangkai daun",
+      "Daun mengering jika tangkai daun terserang"
+    ]
+  },
+  {
+    "name": "Cedar Apple Rust",
+    "symptoms": [
+      "Bintik-bintik kecil berwarna kuning kehijauan yang membesar",
+      "Berubah menjadi kuning jingga dengan garis merah konsentris",
+      "Bercak berbintik dengan struktur buah hitam (spermogonia) di permukaan atas",
+      "Lesi seperti cangkir dengan proyeksi seperti rambut di bagian bawah",
+      "Penebalan daun di sekitar aecia"
+    ]
+  },
+  {
+    "name": "Bacterial Spot",
+    "symptoms": [
+      "Lesi kecil berwarna kuning kehijauan pada daun muda, bengkok dan berubah bentuk",
+      "Lesi kecil berwarna kuning kehijauan pada daun muda",
+      "Pada daun tua, lesi bersudut, hijau tua, berminyak, dikelilingi lingkaran kuning",
+      "Lebih banyak di tepi atau ujung daun",
+      "Bintik-bintik seperti lubang bekas tembakan karena bagian tengahnya mengering dan hancur",
+      "Bintik-bintik kecil, basah, abu-abu di sisi bawah",
+      "Bercak hitam dengan lingkaran kuning sempit",
+      "Lebih banyak di tepi atau ujung daun",
+      "Daun berubah bentuk dan terpelintir",
+      "Lesi menyatu, membesar 0,25-0,5 cm",
+      "Berubah warna coklat hingga merah kecoklatan",
+      "Pusat mengering, terlihat seperti lubang bekas tembakan",
+      "Bersudut atau tidak beraturan, ungu, coklat, atau hitam",
+      "Bagian tengah nekrotik dan rontok",
+      "Klorosis, hangus, dan rontok dini"
+    ]
+  },
+  {
+    "name": "Powdery Mildew",
+    "symptoms": [
+      "Bintik putih tepung berbentuk lingkaran pada daun, batang, dan buah",
+      "Menutupi bagian atas daun, terkadang di bagian bawah",
+      "Menghambat fotosintesis, daun menguning, mengering, dan bisa terpelintir/patah",
+      "Tunas dan ujung tumbuh rusak"
+    ]
+  },
+  {
+    "name": "Gray Leaf Spot",
+    "symptoms": [
+      "Bintik nekrotik kecil dengan lingkaran kuning di daun bagian bawah",
+      "Berubah warna menjadi abu-abu dan muncul di daun muda",
+      "Lesi membesar, memanjang, dan sejajar urat daun",
+      "Dapat menyatu dan menelan seluruh daun"
+    ]
+  },
+  {
+    "name": "Common Rust",
+    "symptoms": [
+      "Bintik-bintik kecil di kedua sisi daun, berkembang menjadi coklat dan menonjol",
+      "Berubah menjadi pustula tepung berwarna coklat keemasan di atas dan bawah daun",
+      "Bisa berubah menjadi hitam seiring waktu",
+      "Gejala tidak biasanya terlihat pada batang, pelepah daun, atau sekam",
+      "Batang lemah, lunak, dan rentan patah",
+      "Infeksi dini: klorosis daun dan kematian",
+      "Kehilangan hasil tinggi jika daun bagian atas terkena"
+    ]
+  },
+  {
+    "name": "Northern Leaf Blight",
+    "symptoms": [
+      "Bintik-bintik kecil, lonjong, basah kuyup pada daun bagian bawah",
+      "Menyebar ke bagian atas tanaman seiring perkembangan penyakit",
+      "Bintik-bintik tua: lesi nekrotik coklat tua berbentuk cerutu dengan bintik-bintik gelap dan tepi hijau pucat",
+      "Lesi menyatu, menelan daun dan tangkai, menyebabkan kematian dan rebah",
+      "Infeksi pada tongkol: kehilangan hasil parah (hingga 70%)"
+    ]
+  },
+  {
+    "name": "Esca",
+    "symptoms": [
+      "Garis-garis interveinal: perubahan warna dan pengeringan jaringan di sekitar vena utama",
+      "Warna merah tua pada varietas merah, kuning pada varietas putih",
+      "Mengering dan rontok sebelum waktunya"
+    ]
+  },
+  {
+    "name": "Leaf Blight",
+    "symptoms": [
+      "Bercak-bercak kecil basah dengan tepi kuning lemon",
+      "Lesi nekrotik berwarna coklat",
+      "Pengguguran daun"
+    ]
+  },
+  {
+    "name": "Huanglongbing (Citrus greening)",
+    "symptoms": [
+      "klorosis atau daunnya menguning, warna tulang daun menjadi hijau tua, daunnya lebih tebal, kaku dan ukurannya menjadi lebih kecil"
+    ]
+  },
+  {
+    "name": "Early Blight",
+    "symptoms": [
+      "Bintik-bintik abu-abu atau coklat",
+      "Membentuk lingkaran di sekitar bagian tengah yang bening",
+      "Dikelilingi cincin kuning cerah",
+      "Daun menguning dan rontok"
+    ]
+  },
+  {
+    "name": "Late Blight",
+    "symptoms": [
+      "Bintik-bintik coklat tua mulai dari ujung atau tepi daun",
+      "Lesi basah kuyup di daerah lembab",
+      "Semburat jamur putih di bagian bawah daun",
+      "Nekrosis, berubah warna menjadi coklat, mati",
+      "Bintik-bintik hijau kecoklatan di tepi dan pucuk daun",
+      "Berubah warna menjadi coklat seluruhnya",
+      "Lesi ditutupi jamur abu-abu/putih di sisi bawah",
+      "Coklat, menggulung, kering",
+      "Bintik-bintik coklat berbatas tegas dan lapisan putih pada batang, cabang, tangkai daun"
+    ]
+  },
+  {
+    "name": "Leaf Scorch",
+    "symptoms": [
+      "Bintik-bintik kuning samar pada daun (terlihat saat daun dipegang di bawah sinar matahari)",
+      "Urat-urat sekunder pada bintik-bintik berwarna coklat",
+      "Bintik-bintik membesar, berubah warna menjadi coklat kemerahan dan bersudut",
+      "Jaringan daun nekrotik, lesi membentuk batas kuning (merah pada varietas anggur merah) antara jaringan sehat dan sakit",
+      "Infeksi akhir musim: bintik-bintik berbintik, daun rontok prematur, pengeringan gugusan bunga terinfeksi",
+      "Hanya batang buah beri yang terinfeksi, bukan rachis (tidak seperti hawar Botrytis)"
+    ]
+  },
+  {
+    "name": "Leaf Mold",
+    "symptoms": [
+      "Bintik-bintik kecil, menyebar, hijau pucat atau kekuningan",
+      "Bercak hijau zaitun hingga ungu keabu-abuan",
+      "Bercak membesar, daun menguning (klorosis) dan coklat (nekrosis)",
+      "Daun menggulung, mengering, dan rontok"
+    ]
+  },
+  {
+    "name": "Septoria Leaf Spot",
+    "symptoms": [
+      "Bintik-bintik kecil, melingkar, abu-abu basah dengan tepi coklat tua",
+      "Membesar, menyatu, dengan titik-titik hitam di tengah"
+    ]
+  },
+  {
+    "name": "Spider Mites",
+    "symptoms": [
+      "Bintik-bintik putih hingga kuning di permukaan atas",
+      "Berubah warna menjadi perunggu/keperakan, rapuh, robek, rontok"
+    ]
+  },
+  {
+    "name": "Target Spot",
+    "symptoms": [
+      "Lesi primer kecil berwarna putih atau cokelat (2-3 mm) muncul di dedaunan bagian bawah",
+      "Lesi menyebar ke luar",
+      "Lingkaran nekrotik terbentuk di sekitar lesi primer",
+      "Bercak target muncul pada daun terendah dan tertua terlebih dahulu",
+      "Bercak menyebar ke daun atas seiring waktu"
+    ]
+  },
+  {
+    "name": "Tomato Yellow Leaf Curl Virus",
+    "symptoms": [
+      "Kerdil, pertumbuhan terhambat",
+      "Lebih tebal, keriput, klorosis interveinal",
+      "Tekstur kasar, tepi klorosis menggulung ke atas dan ke dalam"
+    ]
+  },
+  {
+    "name": "Tomato Mosaic Virus",
+    "symptoms": [
+      "Bintik-bintik hijau dan kuning atau pola mosaik",
+      "Daun muda terdistorsi",
+      "Daun tua: area hijau tua menonjol"
+    ]
+  },
+  {
+    "name": "Healthy",
+    "symptoms": []
+  }
+]
