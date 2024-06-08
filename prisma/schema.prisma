@@ -14,9 +14,19 @@ datasource db {
 }
 
 model users {
-  user_id   Int     @id             @default(autoincrement())
-  name      String  @db.VarChar(50)
-  email     String  @db.VarChar(50) @unique
-  password  String  @db.VarChar(100)
-  image_url String  @db.VarChar(255) 
+  user_id   Int         @id             @default(autoincrement())
+  name      String      @db.VarChar(50)
+  email     String      @db.VarChar(50) @unique
+  password  String      @db.VarChar(100)
+  image_url String      @db.VarChar(255)
+  history   histories[]
+}
+
+model histories {
+  history_id  Int     @id @default(autoincrement())
+  image_url   String  @db.VarChar(255)
+  percentage  Int
+  disease     String  @db.VarChar(255)
+  user_id     Int
+  user        users   @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
 }

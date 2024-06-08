@@ -18,7 +18,7 @@ authHandler.post('/auth/login', async (req, res, next) => {
 
     const token = jwt.sign({
       id: result.user_id,
-    }, 's3h4rusny4(1n1)s3cr3t[k3y]t4p1{b1ngung}k4t4_k4t4ny4', { expiresIn: '1d' });
+    }, 's3h4rusny4(1n1)s3cr3t[k3y]t4p1{b1ngung}k4t4_k4t4ny4', { expiresIn: '1h' });
 
     res.status(200).json({
       message: 'Created',
@@ -26,7 +26,7 @@ authHandler.post('/auth/login', async (req, res, next) => {
         id: result.user_id,
         name: result.name,
         email: result.email,
-        image_url: `http://${req.headers.host}/${result.image_url}`,
+        image_url: result.image_url,
         token
       },
     });
