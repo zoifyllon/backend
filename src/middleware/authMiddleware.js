@@ -6,12 +6,12 @@ function authMiddleware() {
     try {
       const token = req.get('Authorization') || req.headers.Authorization;
       if (!token) {
-        throw new AuthenticationError('token tidak valid');
+        throw new AuthenticationError('token tidak terdeteksi');
       }
 
       const tokenString = token.split(' ')[1];
 
-      jwt.verify(tokenString, 's3h4rusny4(1n1)s3cr3t[k3y]t4p1{b1ngung}k4t4_k4t4ny4', (err, decodedToken) => {
+      jwt.verify(tokenString, process.env.JWT_KEY, (err, decodedToken) => {
         if (err) {
           throw new AuthenticationError('token tidak valid');
         }

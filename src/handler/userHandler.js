@@ -13,30 +13,6 @@ const ImgUpload = require('../utils/cloudStorage');
 
 const userHandler = Router();
 
-userHandler.post('/auth/register', multer.single('imageFile'), ImgUpload.uploadToGcs, async (req, res, next) => {
-  try {
-    const { name, email, password } = req.body;
-    const imageUrl = req.file.cloudStoragePublicUrl;
-  
-    await verifyUserEmail(email);
-    
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const result = await addUserRepository({ name, email, password: hashedPassword, imageUrl });
-
-    res.status(201).json({
-      message: 'Created',
-      data: {
-        id: result.user_id,
-        name: result.name,
-        email: result.email,
-        image_url: result.image_url
-      },
-    });
-  } catch (error) {
-    next(error)
-  }
-});
-
 userHandler.get('/users', async (req, res, next) => {
   try {
     const result = await getUsersRepository();
