@@ -1,34 +1,15 @@
-function predict() {
-  // ml model prediction
-  // expected parameter (model, image)
+const axios = require('axios');
 
-  // dummy return
-  const diseases = [
-    "Apple Scab",
-    "Black Rot",
-    "Cedar Apple Rust",
-    "Bacterial Spot",
-    "Powdery Mildew",
-    "Gray Leaf Spot",
-    "Common Rust",
-    "Northern Leaf Blight",
-    "Esca",
-    "Leaf Blight",
-    "Huanglongbing",
-    "Early Blight",
-    "Late Blight",
-    "Leaf Scorch",
-    "Leaf Mold",
-    "Septoria Leaf Spot",
-    "Spider Mites",
-    "Target Spot",
-    "Tomato Yellow Leaf Curl Virus",
-    "Tomato Mosaic Virus"
-  ];
-  const disease = diseases[Math.floor(Math.random() * 20)]
-  const percentage = Math.random() * 100;
-
-  return { disease, percentage };
+const predict = async(url) => {
+  const apiResponse = await axios.get(process.env.DETECT_API_URL + url);
+  if ('error' in apiResponse.data) {
+    throw new Error(apiResponse.data["error"]);
+  }
+  if ('error' in apiResponse.data) {
+    throw new Error(apiResponse.data["error"]);
+  }
+  console.log(apiResponse.data);
+  return apiResponse.data;
 }
 
-module.exports = predict;
+module.exports = { predict } 

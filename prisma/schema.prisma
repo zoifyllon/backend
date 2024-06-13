@@ -25,8 +25,15 @@ model users {
 model histories {
   history_id  Int     @id @default(autoincrement())
   image_url   String  @db.VarChar(255)
-  percentage  Int
-  disease     String  @db.VarChar(255)
   user_id     Int
   user        users   @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
+  diseases     diseases[]
+}
+
+model diseases {
+  disease_id     Int         @id @default(autoincrement())
+  history_id     Int
+  history        histories   @relation(fields: [history_id], references: [history_id], onDelete: Cascade)
+  disease        String      @db.VarChar(255)
+  percentage     Int         
 }

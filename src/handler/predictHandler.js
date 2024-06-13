@@ -4,31 +4,35 @@ const multer = require('../utils/multer');
 const ImgUpload = require('../utils/cloudStorage');
 const authMiddleware = require('../middleware/authMiddleware');
 const { addHistoryRepository, getHistoriesRepository, getHistoryByIdRepository } = require('../repositories/histRepositories');
-const predict = require('../predict/predict');
+const { predict } = require('../predict/predict');
 const dataJSON = require('../../data.json');
 const ATOI = require('../utils/intToString');
 
 const predictHandler = Router();
 
-// predictHandler.post('/detect', authMiddleware(), multer.single('image'), ImgUpload.uploadToGcs, async (req, res, next) => {
-predictHandler.post('/detect', authMiddleware(), async (req, res, next) => {
+predictHandler.post('/detect', authMiddleware(), multer.single('imageFile'), ImgUpload.uploadToGcs, async (req, res, next) => {
   try {
     const { id: userId } = req.user;
 
-    const { disease, percentage } = predict();
-    const imageUrl = '...'
+    const imageUrl = req.file.cloudStoragePublicUrl
+    const data = await predict(imageUrl)
+    console.log(data)
+    
+    const result = await addHistoryRepository({ data: data.data, userId, imageUrl });
 
-    const result = await addHistoryRepository({ percentage, disease, userId, imageUrl });
+    console.log(result)
 
     res.status(201).json({
       message: 'Success',
       data: {
-        id: result.history_id,
-        user_id: result.user_id,
+        history_id: result.history_id,
         image_url: result.image_url,
-        disease: result.disease,
-        percentage: result.percentage
-      }
+        user_id: result.user_id,
+        diseases: result.diseases.map(disease => ({
+          ...disease,
+          percentage: disease.percentage / 100
+        })),
+      },
     })
   } catch (error) {
     next(error)
