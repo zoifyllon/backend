@@ -1,15 +1,10 @@
-const { Router } = require('express');
 const bcrypt = require('bcrypt');
 const { login } = require('../repositories/authRepositories');
 const AuthenticationError = require('../exceptions/AuthenticationError');
 const jwt = require('jsonwebtoken');
-const multer = require('../utils/multer');
-const ImgUpload = require('../utils/cloudStorage');
 const { verifyUserEmail, addUserRepository } = require('../repositories/usersRepositories');
 
-const authHandler = Router();
-
-authHandler.post('/auth/login', async (req, res, next) => {
+exports.loginController = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     const result = await login(email);
@@ -36,9 +31,9 @@ authHandler.post('/auth/login', async (req, res, next) => {
   } catch (error) {
     next(error)
   }
-});
+};
 
-authHandler.post('/auth/register', multer.single('profileImage'), ImgUpload.uploadToGcs, async (req, res, next) => {
+exports.registerController = async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
     const defaultImgUrl = "https://storage.googleapis.com/zoifyllon-bucket/profile/default_image.jpg"
@@ -61,6 +56,4 @@ authHandler.post('/auth/register', multer.single('profileImage'), ImgUpload.uplo
   } catch (error) {
     next(error)
   }
-});
-
-module.exports = authHandler;
+};

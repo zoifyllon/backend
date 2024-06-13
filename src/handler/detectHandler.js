@@ -1,26 +1,20 @@
-const { Router } = require('express');
-
-const multer = require('../utils/multer');
 const ImgUpload = require('../utils/cloudStorage');
-const authMiddleware = require('../middleware/authMiddleware');
 const { addHistoryRepository, getHistoriesRepository, getHistoryByIdRepository, deleteHistoryByIdRepository } = require('../repositories/histRepositories');
-const { predict } = require('../predict/predict');
+const { detect } = require('../service/detect');
 const dataJSON = require('../../data.json');
 const ATOI = require('../utils/intToString');
 
-const predictHandler = Router();
-
-predictHandler.post('/detect', authMiddleware(), multer.single('detectImage'), ImgUpload.uploadToGcs, async (req, res, next) => {
+exports.detectController = async (req, res, next) => {
   try {
     const { id: userId } = req.user;
 
     const imageUrl = req.file.cloudStoragePublicUrl
-    const data = await predict(imageUrl)
+    const data = await detect(imageUrl)
     
     const result = await addHistoryRepository({ data: data.data, userId, imageUrl });
 
     res.status(201).json({
-      message: 'Success',
+      message: 'Created',
       data: {
         id: result.history_id,
         image_url: result.image_url,
@@ -34,9 +28,9 @@ predictHandler.post('/detect', authMiddleware(), multer.single('detectImage'), I
   } catch (error) {
     next(error)
   }
-});
+};
 
-predictHandler.get('/history', authMiddleware(), async (req, res, next) => {
+exports.getHistoriesController = async (req, res, next) => {
   try {
     const { id: userId } = req.user;
     const result = await getHistoriesRepository(userId);
@@ -56,9 +50,9 @@ predictHandler.get('/history', authMiddleware(), async (req, res, next) => {
   } catch (error) {
     next(error)
   }
-});
+};
 
-predictHandler.get('/history/:historyId', authMiddleware(), async (req, res, next) => {
+exports.getHistoryByIdController = async (req, res, next) => {
   try {
     const { id: userId } = req.user;
     const { historyId } = req.params;
@@ -82,9 +76,9 @@ predictHandler.get('/history/:historyId', authMiddleware(), async (req, res, nex
   } catch (error) {
     next(error)
   }
-});
+};
 
-predictHandler.delete('/history/:historyId', authMiddleware(), async (req, res, next) => {
+exports.deleteHistoryByIdController = async (req, res, next) => {
   try {
     const { id: userId } = req.user;
     const { historyId } = req.params;
@@ -104,6 +98,5 @@ predictHandler.delete('/history/:historyId', authMiddleware(), async (req, res, 
   } catch (error) {
     next(error)
   }
-});
+};
 
-module.exports = predictHandler;

@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const predict = async(url) => {
+const detect = async(url) => {
   const apiResponse = await axios.get(process.env.DETECT_API_URL + url);
   if ('error' in apiResponse.data) {
     throw new Error(apiResponse.data["error"]);
@@ -9,4 +9,4 @@ const predict = async(url) => {
   return apiResponse.data;
 }
 
-module.exports = { predict } 
+module.exports = { detect } 

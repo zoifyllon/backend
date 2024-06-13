@@ -1,19 +1,14 @@
-const { Router } = require('express');
 const bcrypt = require('bcrypt');
 const {
   getUserIdRepository, 
   putUserRepository,
   deleteUserRepository,
 } = require('../repositories/usersRepositories');
-const multer = require('../utils/multer');
-const authMiddleware = require('../middleware/authMiddleware');
 const AuthorizationError = require('../exceptions/AuthorizationError');
 const ATOI = require('../utils/intToString');
 const ImgUpload = require('../utils/cloudStorage');
 
-const userHandler = Router();
-
-userHandler.get('/users', authMiddleware(), async (req, res, next) => {
+exports.getUserController = async (req, res, next) => {
   try {
     const { id:userId } = req.user;
 
@@ -32,9 +27,9 @@ userHandler.get('/users', authMiddleware(), async (req, res, next) => {
   } catch (error) {
     next(error)
   }
-});
+};
 
-userHandler.put('/users', authMiddleware(), multer.single('profileImage'), ImgUpload.uploadToGcs, async (req, res, next) => {
+exports.putUserController = async (req, res, next) => {
   try {
     const { name, password } = req.body;
     const { id } = req.user;
@@ -58,9 +53,9 @@ userHandler.put('/users', authMiddleware(), multer.single('profileImage'), ImgUp
   } catch (error) {
     next(error)
   }
-});
+};
 
-userHandler.delete('/users/:userId', authMiddleware(), async (req, res, next) => {
+exports.deleteUserController = async (req, res, next) => {
   try {
     const { userId } = req.params;
     const { id } = req.user;
@@ -83,6 +78,4 @@ userHandler.delete('/users/:userId', authMiddleware(), async (req, res, next) =>
   } catch (error) {
     next(error)
   }
-});
-
-module.exports = userHandler;
+};
