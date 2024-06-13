@@ -3,24 +3,21 @@ const { Router } = require('express');
 const multer = require('../utils/multer');
 const ImgUpload = require('../utils/cloudStorage');
 const authMiddleware = require('../middleware/authMiddleware');
-const { addHistoryRepository, getHistoriesRepository, getHistoryByIdRepository } = require('../repositories/histRepositories');
+const { addHistoryRepository, getHistoriesRepository, getHistoryByIdRepository, deleteHistoryByIdRepository } = require('../repositories/histRepositories');
 const { predict } = require('../predict/predict');
 const dataJSON = require('../../data.json');
 const ATOI = require('../utils/intToString');
 
 const predictHandler = Router();
 
-predictHandler.post('/detect', authMiddleware(), multer.single('imageFile'), ImgUpload.uploadToGcs, async (req, res, next) => {
+predictHandler.post('/detect', authMiddleware(), multer.single('detectImage'), ImgUpload.uploadToGcs, async (req, res, next) => {
   try {
     const { id: userId } = req.user;
 
     const imageUrl = req.file.cloudStoragePublicUrl
     const data = await predict(imageUrl)
-    console.log(data)
     
     const result = await addHistoryRepository({ data: data.data, userId, imageUrl });
-
-    console.log(result)
 
     res.status(201).json({
       message: 'Success',
@@ -82,6 +79,28 @@ predictHandler.get('/history/:historyId', authMiddleware(), async (req, res, nex
         })),
       },
     });
+  } catch (error) {
+    next(error)
+  }
+});
+
+predictHandler.delete('/history/:historyId', authMiddleware(), async (req, res, next) => {
+  try {
+    const { id: userId } = req.user;
+    const { historyId } = req.params;
+
+    const intHistoryId = ATOI(historyId);
+    const result = await getHistoryByIdRepository(intHistoryId, userId);
+    const imageUrl = result.image_url
+ 
+    await ImgUpload.deleteFile(imageUrl)
+    await deleteHistoryByIdRepository(intHistoryId, userId)
+
+    res.status(200).json({
+      message: "success",
+      data: null
+    })
+
   } catch (error) {
     next(error)
   }

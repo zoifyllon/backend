@@ -57,4 +57,13 @@ async function getHistoryByIdRepository(id, userId) {
   return history;
 }
 
-module.exports = { addHistoryRepository, getHistoriesRepository, getHistoryByIdRepository }
+async function deleteHistoryByIdRepository(id, userId) {
+  await prisma.histories.delete({
+    where: {
+      history_id: id,
+      user_id: userId
+    },
+  });
+}
+
+module.exports = { addHistoryRepository, getHistoriesRepository, getHistoryByIdRepository, deleteHistoryByIdRepository }

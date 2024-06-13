@@ -5,7 +5,7 @@ const AuthenticationError = require('../exceptions/AuthenticationError');
 const jwt = require('jsonwebtoken');
 const multer = require('../utils/multer');
 const ImgUpload = require('../utils/cloudStorage');
-const { verifyUserEmail } = require('../repositories/usersRepositories');
+const { verifyUserEmail, addUserRepository } = require('../repositories/usersRepositories');
 
 const authHandler = Router();
 
@@ -24,7 +24,7 @@ authHandler.post('/auth/login', async (req, res, next) => {
     }, process.env.JWT_KEY, { expiresIn: '10h' });
 
     res.status(200).json({
-      message: 'Created',
+      message: 'Success',
       data: {
         id: result.user_id,
         name: result.name,
@@ -38,11 +38,12 @@ authHandler.post('/auth/login', async (req, res, next) => {
   }
 });
 
-authHandler.post('/auth/register', multer.single('imageFile'), ImgUpload.uploadToGcs, async (req, res, next) => {
+authHandler.post('/auth/register', multer.single('profileImage'), ImgUpload.uploadToGcs, async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
-    const imageUrl = req.file.cloudStoragePublicUrl;
-  
+    const defaultImgUrl = "https://storage.googleapis.com/zoifyllon-bucket/profile/default_image.jpg"
+    const imageUrl = req.file?req.file.cloudStoragePublicUrl:defaultImgUrl;
+
     await verifyUserEmail(email);
     
     const hashedPassword = await bcrypt.hash(password, 10);
