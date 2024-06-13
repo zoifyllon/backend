@@ -25,7 +25,7 @@ predictHandler.post('/detect', authMiddleware(), multer.single('imageFile'), Img
     res.status(201).json({
       message: 'Success',
       data: {
-        history_id: result.history_id,
+        id: result.history_id,
         image_url: result.image_url,
         user_id: result.user_id,
         diseases: result.diseases.map(disease => ({
@@ -42,7 +42,6 @@ predictHandler.post('/detect', authMiddleware(), multer.single('imageFile'), Img
 predictHandler.get('/history', authMiddleware(), async (req, res, next) => {
   try {
     const { id: userId } = req.user;
-
     const result = await getHistoriesRepository(userId);
 
     res.status(200).json({
@@ -51,8 +50,10 @@ predictHandler.get('/history', authMiddleware(), async (req, res, next) => {
         id: data.history_id,
         user_id: data.user_id,
         image_url: data.image_url,
-        disease: data.disease,
-        percentage: data.percentage
+        diseases: data.diseases.map(disease => ({
+          ...disease,
+          percentage: disease.percentage / 100
+        })),
       })),
     });
   } catch (error) {
@@ -68,17 +69,17 @@ predictHandler.get('/history/:historyId', authMiddleware(), async (req, res, nex
     const intHistoryId = ATOI(historyId);
     const result = await getHistoryByIdRepository(intHistoryId, userId);
 
-    const index = dataJSON.findIndex((d) => d.name === result.disease);
-
     res.status(200).json({
       message: 'Success',
       data: {
         id: result.history_id,
         user_id: result.user_id,
         image_url: result.image_url,
-        disease: result.disease,
-        percentage: result.percentage,
-        symptoms: dataJSON[index].symptoms
+        diseases: result.diseases.map(disease => ({
+          ...disease,
+          percentage: disease.percentage / 100,
+          symptoms: dataJSON[dataJSON.findIndex((d) => d.name === disease.disease)].symptoms
+        })),
       },
     });
   } catch (error) {

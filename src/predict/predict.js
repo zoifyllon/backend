@@ -5,9 +5,6 @@ const predict = async(url) => {
   if ('error' in apiResponse.data) {
     throw new Error(apiResponse.data["error"]);
   }
-  if ('error' in apiResponse.data) {
-    throw new Error(apiResponse.data["error"]);
-  }
   console.log(apiResponse.data);
   return apiResponse.data;
 }

@@ -31,13 +31,9 @@ async function getHistoriesRepository(userId) {
     where: {
       user_id: userId
     },
-    select: {
-      history_id: true,
-      user_id: true,
-      image_url: true,
-      disease: true,
-      percentage: true,
-    }
+    include: {
+      diseases: true 
+    },
   });
 
   return histories;
@@ -49,13 +45,9 @@ async function getHistoryByIdRepository(id, userId) {
       history_id: id,
       user_id: userId,
     },
-    select: {
-      history_id: true,
-      user_id: true,
-      image_url: true,
-      disease: true,
-      percentage: true,
-    }
+    include: {
+      diseases: true
+    },
   });
 
   if (!history) {
