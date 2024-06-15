@@ -412,11 +412,6 @@ Endpoint : DELETE /history/{historyId}
 Headers:
 - Authorization: token
 
-Body Request :
-```
-detectImage: file
-```
-
 Response :
 ```
 HTTP Response 200
