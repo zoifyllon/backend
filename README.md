@@ -57,6 +57,7 @@ Response Body Error :
   ```
   HTTP Response 400
   {
+    "status": "fail",
     "message": "field tidak boleh kosong"
   }
   ```
@@ -64,6 +65,7 @@ Response Body Error :
   ```
   HTTP Response 400
   {
+    "status": "fail",
     "message": "field harus berupa string"
   }
   ```
@@ -71,6 +73,7 @@ Response Body Error :
   ```
   HTTP Response 400
   {
+    "status": "fail",
     "message": "jumlah karakter melebihi batas maksimal 50"
   }
   ```
@@ -173,6 +176,7 @@ Response Body Error :
   ```
   HTTP Response 400
   {
+    "status": "fail",
     "message": "field tidak boleh kosong"
   }
   ```
@@ -180,6 +184,7 @@ Response Body Error :
   ```
   HTTP Response 400
   {
+    "status": "fail",
     "message": "field harus berupa string"
   }
   ```
@@ -187,6 +192,7 @@ Response Body Error :
   ```
   HTTP Response 400
   {
+    "status": "fail",
     "message": "jumlah karakter melebihi batas maksimal 50"
   }
   ```
