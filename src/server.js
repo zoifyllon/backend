@@ -2,10 +2,10 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const userHandler = require('./handler/userHandler');
 const { errorMiddleware } = require('./middleware/errorMiddleware');
-const authHandler = require('./handler/authHandler');
-const predictHandler = require('./handler/predictHandler');
+const userHandler = require('./route/userRoute');
+const authHandler = require('./route/authRoute');
+const predictHandler = require('./route/detectRoute');
 
 const app = express();
 

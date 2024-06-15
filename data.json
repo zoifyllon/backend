@@ -1,6 +1,6 @@
 [
   {
-    "name": "Apple Scab",
+    "name": "Apple scab",
     "symptoms": [
       "Bintik-bintik kecil berwarna hijau zaitun pada daun",
       "Berubah menjadi hitam kecoklatan dan menyatu membentuk bercak besar jaringan mati",
@@ -9,7 +9,7 @@
     ]
   },
   {
-    "name": "Black Rot",
+    "name": "Black rot",
     "symptoms": [
       "Bintik-bintik tidak beraturan pada daun, dibatasi garis gelap",
       "Bintik-bintik juga pada tunas, batang, dan tangkai daun",
@@ -17,7 +17,7 @@
     ]
   },
   {
-    "name": "Cedar Apple Rust",
+    "name": "Cedar apple rust",
     "symptoms": [
       "Bintik-bintik kecil berwarna kuning kehijauan yang membesar",
       "Berubah menjadi kuning jingga dengan garis merah konsentris",
@@ -27,7 +27,7 @@
     ]
   },
   {
-    "name": "Bacterial Spot",
+    "name": "Bacterial spot",
     "symptoms": [
       "Lesi kecil berwarna kuning kehijauan pada daun muda, bengkok dan berubah bentuk",
       "Lesi kecil berwarna kuning kehijauan pada daun muda",
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "name": "Powdery Mildew",
+    "name": "Powdery mildew",
     "symptoms": [
       "Bintik putih tepung berbentuk lingkaran pada daun, batang, dan buah",
       "Menutupi bagian atas daun, terkadang di bagian bawah",
@@ -56,7 +56,7 @@
     ]
   },
   {
-    "name": "Gray Leaf Spot",
+    "name": "Cercospora leaf spot(Gray leaf spot)",
     "symptoms": [
       "Bintik nekrotik kecil dengan lingkaran kuning di daun bagian bawah",
       "Berubah warna menjadi abu-abu dan muncul di daun muda",
@@ -65,7 +65,7 @@
     ]
   },
   {
-    "name": "Common Rust",
+    "name": "Common rust",
     "symptoms": [
       "Bintik-bintik kecil di kedua sisi daun, berkembang menjadi coklat dan menonjol",
       "Berubah menjadi pustula tepung berwarna coklat keemasan di atas dan bawah daun",
@@ -87,7 +87,7 @@
     ]
   },
   {
-    "name": "Esca",
+    "name": "Esca (Black Measles)",
     "symptoms": [
       "Garis-garis interveinal: perubahan warna dan pengeringan jaringan di sekitar vena utama",
       "Warna merah tua pada varietas merah, kuning pada varietas putih",
@@ -95,7 +95,7 @@
     ]
   },
   {
-    "name": "Leaf Blight",
+    "name": "Leaf blight (Isariopsis Leaf Spot)",
     "symptoms": [
       "Bercak-bercak kecil basah dengan tepi kuning lemon",
       "Lesi nekrotik berwarna coklat",
@@ -103,13 +103,13 @@
     ]
   },
   {
-    "name": "Huanglongbing (Citrus greening)",
+    "name": "Haunglongbing (Citrus greening)",
     "symptoms": [
       "klorosis atau daunnya menguning, warna tulang daun menjadi hijau tua, daunnya lebih tebal, kaku dan ukurannya menjadi lebih kecil"
     ]
   },
   {
-    "name": "Early Blight",
+    "name": "Early blight",
     "symptoms": [
       "Bintik-bintik abu-abu atau coklat",
       "Membentuk lingkaran di sekitar bagian tengah yang bening",
@@ -118,7 +118,7 @@
     ]
   },
   {
-    "name": "Late Blight",
+    "name": "Late blight",
     "symptoms": [
       "Bintik-bintik coklat tua mulai dari ujung atau tepi daun",
       "Lesi basah kuyup di daerah lembab",
@@ -132,7 +132,7 @@
     ]
   },
   {
-    "name": "Leaf Scorch",
+    "name": "Leaf scorch",
     "symptoms": [
       "Bintik-bintik kuning samar pada daun (terlihat saat daun dipegang di bawah sinar matahari)",
       "Urat-urat sekunder pada bintik-bintik berwarna coklat",
@@ -152,14 +152,14 @@
     ]
   },
   {
-    "name": "Septoria Leaf Spot",
+    "name": "Septoria leaf spot",
     "symptoms": [
       "Bintik-bintik kecil, melingkar, abu-abu basah dengan tepi coklat tua",
       "Membesar, menyatu, dengan titik-titik hitam di tengah"
     ]
   },
   {
-    "name": "Spider Mites",
+    "name": "Spider mites Two-spotted spider mite",
     "symptoms": [
       "Bintik-bintik putih hingga kuning di permukaan atas",
       "Berubah warna menjadi perunggu/keperakan, rapuh, robek, rontok"
@@ -184,7 +184,7 @@
     ]
   },
   {
-    "name": "Tomato Mosaic Virus",
+    "name": "Tomato mosaic virus",
     "symptoms": [
       "Bintik-bintik hijau dan kuning atau pola mosaik",
       "Daun muda terdistorsi",
@@ -192,7 +192,7 @@
     ]
   },
   {
-    "name": "Healthy",
-    "symptoms": []
+    "name": "healthy",
+    "symptoms": ["Tumbuhan Anda Sehat"]
   }
 ]

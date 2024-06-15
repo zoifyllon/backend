@@ -59,16 +59,19 @@ async function getUsersRepository() {
   return users;
 }
 
-async function putUserRepository(id, { name, imageUrl }) {
-  await prisma.users.update({
+async function putUserRepository(id, { newName, imageUrl, newPassword }) {
+  const user = await prisma.users.update({
     where: {
       user_id: id
     },
     data: {
-      name: name,
+      name: newName,
       image_url: imageUrl,
+      password: newPassword
     }
   });
+
+  return user;
 }
 
 async function deleteUserRepository(id) {

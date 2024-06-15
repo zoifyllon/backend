@@ -20,7 +20,15 @@ let ImgUpload = {}
 ImgUpload.uploadToGcs = (req, res, next) => {
   if (!req.file) return next();
 
-  const gcsname = Date.now().toString() + path.extname(req.file.originalname)
+  let gcsname;
+  if (req.file.fieldname === "detectImage") {
+    gcsname = 'detect/' + Date.now().toString() + path.extname(req.file.originalname);
+  } else if (req.file.fieldname === "profileImage") {
+    gcsname = 'profile/' + Date.now().toString() + path.extname(req.file.originalname);
+  } else {
+    throw new Error("Invalid file fieldname");
+  }
+
   const file = bucket.file(gcsname);
 
   const stream = file.createWriteStream({
@@ -44,7 +52,7 @@ ImgUpload.uploadToGcs = (req, res, next) => {
 }
 
 ImgUpload.deleteFile = async (bucketUrl) => {
-  bucketUrl = bucketUrl.split('/')[4];
+  bucketUrl = bucketUrl.split('/')[4] + '/' + bucketUrl.split('/')[5];
 
   await bucket.file(bucketUrl).delete();
 }

@@ -1,21 +1,29 @@
 const NotFoundError = require("../exceptions/NotFoundError");
 const prisma = require("../utils/database");
 
-async function addHistoryRepository({ percentage, disease, userId, imageUrl }) {
-  const result = await prisma.histories.create({
+async function addHistoryRepository({ userId, imageUrl, data }) {
+  const diseasesData = Object.entries(data).map(([key, value]) => ({
+    disease: key,
+    percentage: Math.floor(value*100),
+  }));
+
+  diseasesData.sort((a, b) => b.percentage - a.percentage);
+  const choosenData = diseasesData.slice(0, 3);
+
+  const history = await prisma.histories.create({
     data: {
-      image_url: imageUrl, percentage, disease, user_id: userId
+      image_url: imageUrl,
+      user_id: userId,
+      diseases: {
+        create: choosenData,
+      },
     },
-    select: {
-      history_id: true,
-      user_id: true,
-      image_url: true,
-      disease: true,
-      percentage: true,
-    }
+    include: {
+      diseases: true, 
+    },
   });
 
-  return result;
+  return history;
 }
 
 async function getHistoriesRepository(userId) {
@@ -23,13 +31,9 @@ async function getHistoriesRepository(userId) {
     where: {
       user_id: userId
     },
-    select: {
-      history_id: true,
-      user_id: true,
-      image_url: true,
-      disease: true,
-      percentage: true,
-    }
+    include: {
+      diseases: true 
+    },
   });
 
   return histories;
@@ -41,13 +45,9 @@ async function getHistoryByIdRepository(id, userId) {
       history_id: id,
       user_id: userId,
     },
-    select: {
-      history_id: true,
-      user_id: true,
-      image_url: true,
-      disease: true,
-      percentage: true,
-    }
+    include: {
+      diseases: true
+    },
   });
 
   if (!history) {
@@ -57,4 +57,13 @@ async function getHistoryByIdRepository(id, userId) {
   return history;
 }
 
-module.exports = { addHistoryRepository, getHistoriesRepository, getHistoryByIdRepository }
+async function deleteHistoryByIdRepository(id, userId) {
+  await prisma.histories.delete({
+    where: {
+      history_id: id,
+      user_id: userId
+    },
+  });
+}
+
+module.exports = { addHistoryRepository, getHistoriesRepository, getHistoryByIdRepository, deleteHistoryByIdRepository }
