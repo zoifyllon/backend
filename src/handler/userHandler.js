@@ -34,9 +34,11 @@ exports.putUserController = async (req, res, next) => {
     const { name, password } = req.body;
     const { id } = req.user;
 
-    if (name.length > 50) return res.status(400).json({ message: 'jumlah karakter melebihi batas maksimal 50' });
+    if (!name && !password && !req.file) return res.status(400).json({ message: 'salah satu field harus terisi' })
 
-    if (typeof name !== 'string' || typeof password !== 'string'  ) {
+    if (name && name.length > 50) return res.status(400).json({ message: 'jumlah karakter melebihi batas maksimal 50' });
+
+    if ((name && typeof name !== 'string') || (password && typeof password !== 'string')  ) {
       return res.status(400).json({ message: 'field harus berupa string' });
     }
 
