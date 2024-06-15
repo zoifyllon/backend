@@ -95,7 +95,7 @@ HTTP Response 200
   "data": {
     "id": 1,
     "name": "John Doe",
-    "email": "johndoe@test.com",
+    "email": "johndoe@gmail.com",
     "image_url": "profile image url",
     "token": "string token"
   }
@@ -151,7 +151,7 @@ Headers:
 
 Body Request :
 ```
-name: "test"
+name: "John Doe Update"
 password: "test"
 profileImage: file
 ```
@@ -163,7 +163,7 @@ HTTP Response 200
   "message": "Success"
   "data": {
     "user_id": 1,
-    "name": "John Doe",
+    "name": "John Doe Update",
     "email": "johndoe@gmail.com",
     "password": "encrypted password",
     "image_url": "profile image url"
