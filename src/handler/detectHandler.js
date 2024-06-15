@@ -8,9 +8,12 @@ exports.detectController = async (req, res, next) => {
   try {
     const { id: userId } = req.user;
 
+    if (!req.file.cloudStoragePublicUrl){
+      throw new Error("gambar tidak terupload")
+    }
+
     const imageUrl = req.file.cloudStoragePublicUrl
     const data = await detect(imageUrl)
-    
     const result = await addHistoryRepository({ data: data.data, userId, imageUrl });
 
     res.status(201).json({
@@ -19,10 +22,15 @@ exports.detectController = async (req, res, next) => {
         id: result.history_id,
         image_url: result.image_url,
         user_id: result.user_id,
-        diseases: result.diseases.map(disease => ({
-          ...disease,
-          percentage: disease.percentage / 100
-        })),
+        diseases: result.diseases.map(disease => {
+          const idx = dataJSON.findIndex((d) => d.name === disease.disease);
+          return ({
+            ...disease,
+            percentage: disease.percentage / 100,
+            symptoms: dataJSON[idx].symptoms,
+            prevents: dataJSON[idx].prevents
+          })
+        }),
       },
     })
   } catch (error) {
