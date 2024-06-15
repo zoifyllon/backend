@@ -142,6 +142,22 @@ Response Body Error :
     "message": "user not found"
   }
   ```
+- jika token tidak ada
+  ```
+  HTTP Response 401
+  {
+    "status": "fail",
+    "message": "token tidak terdeteksi"
+  }
+  ```
+- jika token tidak valid
+  ```
+  HTTP Response 401
+  {
+    "status": "fail",
+    "message": "token tidak valid"
+  }
+  ```
   
 ### UPDATE USER
 Endpoint : PUT /users
@@ -204,9 +220,25 @@ Response Body Error :
     "message": "user not found"
   }
   ```
+- jika token tidak ada
+  ```
+  HTTP Response 401
+  {
+    "status": "fail",
+    "message": "token tidak terdeteksi"
+  }
+  ```
+- jika token tidak valid
+  ```
+  HTTP Response 401
+  {
+    "status": "fail",
+    "message": "token tidak valid"
+  }
+  ```
     
 ### DELETE USER
-Endpoint : DELETE /users
+Endpoint : DELETE /users/{userId}
 
 Headers:
 - Authorization: token
@@ -227,6 +259,22 @@ Response Body Error :
   {
     "status": "fail",
     "message": "user not found"
+  }
+  ```
+- jika token tidak ada
+  ```
+  HTTP Response 401
+  {
+    "status": "fail",
+    "message": "token tidak terdeteksi"
+  }
+  ```
+- jika token tidak valid
+  ```
+  HTTP Response 401
+  {
+    "status": "fail",
+    "message": "token tidak valid"
   }
   ```
   
@@ -274,6 +322,24 @@ HTTP Response 201
   }
 }
 ```
+
+Response Body Error :
+- jika token tidak ada
+  ```
+  HTTP Response 401
+  {
+    "status": "fail",
+    "message": "token tidak terdeteksi"
+  }
+  ```
+- jika token tidak valid
+  ```
+  HTTP Response 401
+  {
+    "status": "fail",
+    "message": "token tidak valid"
+  }
+  ```
 
 ### GET ALL HISTORY
 Endpoint : GET /history
@@ -346,6 +412,24 @@ HTTP Response 200
 }
 ```
 
+Response Body Error :
+- jika token tidak ada
+  ```
+  HTTP Response 401
+  {
+    "status": "fail",
+    "message": "token tidak terdeteksi"
+  }
+  ```
+- jika token tidak valid
+  ```
+  HTTP Response 401
+  {
+    "status": "fail",
+    "message": "token tidak valid"
+  }
+  ```
+
 ### GET DETAIL HISTORY
 Endpoint : GET /history/{historyId}
 
@@ -405,6 +489,22 @@ Response Body Error :
     "message": "history not found"
   }
   ```
+- jika token tidak ada
+  ```
+  HTTP Response 401
+  {
+    "status": "fail",
+    "message": "token tidak terdeteksi"
+  }
+  ```
+- jika token tidak valid
+  ```
+  HTTP Response 401
+  {
+    "status": "fail",
+    "message": "token tidak valid"
+  }
+  ```
 
 ### DELETE HISTORY
 Endpoint : DELETE /history/{historyId}
@@ -428,5 +528,21 @@ Response Body Error :
   {
     "status": "fail",
     "message": "history not found"
+  }
+  ```
+- jika token tidak ada
+  ```
+  HTTP Response 401
+  {
+    "status": "fail",
+    "message": "token tidak terdeteksi"
+  }
+  ```
+- jika token tidak valid
+  ```
+  HTTP Response 401
+  {
+    "status": "fail",
+    "message": "token tidak valid"
   }
   ```
