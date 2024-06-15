@@ -33,7 +33,15 @@ exports.putUserController = async (req, res, next) => {
   try {
     const { name, password } = req.body;
     const { id } = req.user;
-    
+
+    if (!name || !password) return res.status(400).json({ message: 'field tidak boleh kosong' });
+
+    if (name.length > 50) return res.status(400).json({ message: 'jumlah karakter melebihi batas maksimal 50' });
+
+    if (typeof name !== 'string' || typeof password !== 'string'  ) {
+      return res.status(400).json({ message: 'field harus berupa string' });
+    }
+
     const result = await getUserIdRepository(id);
 
     const imageUrl = req.file ? req.file.cloudStoragePublicUrl : result.image_url;

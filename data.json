@@ -6,6 +6,19 @@
       "Berubah menjadi hitam kecoklatan dan menyatu membentuk bercak besar jaringan mati",
       "Daun rontok sebelum waktunya, menyebabkan penggundulan",
       "Lepuh dan retak pada pucuk, menjadi jalan masuk patogen lain"
+    ],
+    "prevents": [
+      "Gunakan varietas yang toleran atau tahan",
+      "Pantau kebun untuk mencari tanda-tanda penyakit",
+      "Ambil daun, pucuk dan buah yang terserang",
+      "Kumpulkan semua daun-daun yang berguguran di sekitar pohon Anda setelah panen",
+      "Sebagai alternatif, gunakan urea 5% pada daun di musim gugur untuk meningkatkan dekomposisi dan menghambat siklus hidup jamur",
+      "Sampah daun yang berlebihan juga dapat dipangkas untuk mempercepat kerusakan jaringan",
+      "Pastikan metode pemangkasan yang memungkinkan sirkulasi udara lebih banyak",
+      "Siram pada sore atau pagi hari dan hindari irigasi yang berlebihan",
+      "Hindari membasahi dedaunan saat menyiram",
+      "Pemberian kapur setelah daun berguguran untuk meningkatkan pH tanah",
+      "Sebarkan mulsa di bawah pohon, jauhkan dari batangnya"
     ]
   },
   {
@@ -14,6 +27,15 @@
       "Bintik-bintik tidak beraturan pada daun, dibatasi garis gelap",
       "Bintik-bintik juga pada tunas, batang, dan tangkai daun",
       "Daun mengering jika tangkai daun terserang"
+    ],
+    "prevents": [
+      "Pilih varietas yang lebih tahan jika tersedia",
+      "Buang mumi buah dari pokoknya",
+      "Kayu dan benang yang terserang harus disingkirkan dan dimusnahkan setelah dipanen",
+      "Oleh karena itu, singkirkan daun-daun yang terserang penyakit dari kebun anggur",
+      "Jaga kebun anggur Anda bersih dari gulma",
+      "Sediakan sirkulasi udara dan pencahayaan yang baik",
+      "Pangkas tanaman merambat Anda setiap tahun sebelum tahap vegetatif"
     ]
   },
   {
@@ -24,26 +46,41 @@
       "Bercak berbintik dengan struktur buah hitam (spermogonia) di permukaan atas",
       "Lesi seperti cangkir dengan proyeksi seperti rambut di bagian bawah",
       "Penebalan daun di sekitar aecia"
+    ],
+    "prevents": [
+      "Hapus pohon juniper atau cedar merah di sekitar untuk mengurangi penyebaran penyakit",
+      "Buang dan hancurkan daun, buah, dan galls yang terinfeksi secara teratur",
+      "Pangkas pohon apel untuk meningkatkan sirkulasi udara dan mengurangi kelembaban",
+      "Tanam varietas apel yang tahan terhadap karat apel cedar seperti 'Redfree', 'Liberty', 'Enterprise', dan 'Pristine'",
+      "Terapkan fungisida pada musim semi saat pohon apel mulai tumbuh",
+      "Gunakan myclobutanil, propiconazole, atau mancozeb sesuai petunjuk pabrik",
+      "Ulangi aplikasi setiap 7-10 hari, terutama saat cuaca basah"
     ]
   },
   {
     "name": "Bacterial spot",
     "symptoms": [
-      "Lesi kecil berwarna kuning kehijauan pada daun muda, bengkok dan berubah bentuk",
-      "Lesi kecil berwarna kuning kehijauan pada daun muda",
-      "Pada daun tua, lesi bersudut, hijau tua, berminyak, dikelilingi lingkaran kuning",
-      "Lebih banyak di tepi atau ujung daun",
-      "Bintik-bintik seperti lubang bekas tembakan karena bagian tengahnya mengering dan hancur",
-      "Bintik-bintik kecil, basah, abu-abu di sisi bawah",
-      "Bercak hitam dengan lingkaran kuning sempit",
-      "Lebih banyak di tepi atau ujung daun",
-      "Daun berubah bentuk dan terpelintir",
-      "Lesi menyatu, membesar 0,25-0,5 cm",
-      "Berubah warna coklat hingga merah kecoklatan",
-      "Pusat mengering, terlihat seperti lubang bekas tembakan",
-      "Bersudut atau tidak beraturan, ungu, coklat, atau hitam",
-      "Bagian tengah nekrotik dan rontok",
-      "Klorosis, hangus, dan rontok dini"
+      "Lesi kecil kuning kehijauan pada daun muda, bengkok, dan berubah bentuk",
+      "Lesi pada daun tua bersudut, hijau tua, berminyak, dikelilingi lingkaran kuning, lebih banyak di tepi atau ujung daun",
+      "Bintik seperti lubang bekas tembakan karena bagian tengahnya mengering dan hancur",
+      "Bintik kecil, basah, abu-abu di sisi bawah daun",
+      "Bercak hitam dengan lingkaran kuning sempit, lebih banyak di tepi atau ujung daun",
+      "Daun berubah bentuk dan terpelintir, lesi membesar 0,25-0,5 cm, berubah warna coklat hingga merah kecoklatan",
+      "Pusat lesi mengering, terlihat seperti lubang bekas tembakan, bersudut atau tidak beraturan, ungu, coklat, atau hitam",
+      "Bagian tengah nekrotik dan rontok, menyebabkan klorosis, hangus, dan rontok dini"
+    ],
+    "prevents": [
+      "Menanam benih bersertifikat dan bebas penyakit",
+      "Gunakan varietas tahan jika tersedia di daerah Anda",
+      "Periksa lahan secara teratur untuk mencari tanda-tanda penyakit",
+      "Buang dan bakar semua bibit atau tanaman yang terkena bercak daun, serta tanaman di sekitarnya",
+      "Menyingkirkan gulma di dalam dan sekitar lahan",
+      "Mulsa di sekitar tanaman membantu menghindari kontaminasi tanah terhadap tanaman",
+      "Bersihkan peralatan dan perlengkapan setelah digunakan jika bekerja antar bidang yang berbeda",
+      "Hindari irigasi di atas kepala dan bekerja di ladang ketika dedaunan basah",
+      "Membajak sisa-sisa tanaman jauh ke dalam tanah setelah panen",
+      "Cara lainnya, keluarkan dan bakar",
+      "Rencanakan rotasi tanaman selama 2-3 tahun dengan tanaman yang tidak rentan"
     ]
   },
   {
@@ -53,6 +90,19 @@
       "Menutupi bagian atas daun, terkadang di bagian bawah",
       "Menghambat fotosintesis, daun menguning, mengering, dan bisa terpelintir/patah",
       "Tunas dan ujung tumbuh rusak"
+    ],
+    "prevents": [
+      "Gunakan varietas yang tahan atau toleran",
+      "Tanam tanaman dengan jarak tanam yang cukup untuk memberikan ventilasi yang baik",
+      "Pantau lahan secara teratur untuk menilai timbulnya penyakit atau hama",
+      "Buang daun yang terserang saat bercak pertama muncul",
+      "Jangan menyentuh tanaman sehat setelah menyentuh tanaman terinfeksi",
+      "Lapisan mulsa yang tebal dapat mencegah penyebaran spora dari tanah hingga ke daun",
+      "Lakukan rotasi tanaman dengan tanaman yang tidak rentan",
+      "Pemupukan dengan pasokan nutrisi seimbang",
+      "Hindari perubahan suhu yang ekstrem",
+      "Bajak tanah secara menyeluruh setelah panen untuk menggali sisa tanaman jauh ke dalam tanah",
+      "Buang sisa tanaman setelah panen"
     ]
   },
   {
@@ -62,6 +112,13 @@
       "Berubah warna menjadi abu-abu dan muncul di daun muda",
       "Lesi membesar, memanjang, dan sejajar urat daun",
       "Dapat menyatu dan menelan seluruh daun"
+    ],
+    "prevents": [
+      "Tanam varietas yang tahan jika tersedia di daerah Anda",
+      "Tanam terlambat untuk menghindari kondisi buruk bagi tanaman",
+      "Pertahankan ventilasi yang baik dengan memperlebar jarak antar tanaman",
+      "Membajak dalam-dalam dan mengubur semua sisa tanaman setelah panen",
+      "Rencanakan rotasi tanaman jangka panjang dengan tanaman yang bukan inang"
     ]
   },
   {
@@ -74,6 +131,14 @@
       "Batang lemah, lunak, dan rentan patah",
       "Infeksi dini: klorosis daun dan kematian",
       "Kehilangan hasil tinggi jika daun bagian atas terkena"
+    ],
+    "prevents": [
+      "Menanam varietas tahan yang tersedia secara lokal",
+      "Tanam lebih awal untuk menghindari kondisi optimal bagi infeksi",
+      "Gunakan varietas musim pendek yang matang lebih awal",
+      "Pantau tanaman Anda secara teratur untuk mengetahui tanda-tanda penyakit, terlebih lagi saat cuaca mendung",
+      "Pastikan pemupukan seimbang dengan pemberian nitrogen secara terpisah",
+      "Rencanakan rotasi tanaman dengan tanaman yang tidak rentan"
     ]
   },
   {
@@ -84,6 +149,13 @@
       "Bintik-bintik tua: lesi nekrotik coklat tua berbentuk cerutu dengan bintik-bintik gelap dan tepi hijau pucat",
       "Lesi menyatu, menelan daun dan tangkai, menyebabkan kematian dan rebah",
       "Infeksi pada tongkol: kehilangan hasil parah (hingga 70%)"
+    ],
+    "prevents": [
+      "Menanam varietas yang tahan atau toleran",
+      "Pastikan pasokan nutrisi seimbang dan hindari pemupukan nitrogen berlebihan",
+      "Menyiangi gulma secara teratur di dalam dan sekitar lahan",
+      "Ganti dengan kedelai, buncis, atau bunga matahari untuk menghindari penyebaran yang luas",
+      "Bajak dalam-dalam untuk mengubur sisa-sisa tanaman dan mengurangi jumlah inokulum di dalam tanah"
     ]
   },
   {
@@ -92,6 +164,14 @@
       "Garis-garis interveinal: perubahan warna dan pengeringan jaringan di sekitar vena utama",
       "Warna merah tua pada varietas merah, kuning pada varietas putih",
       "Mengering dan rontok sebelum waktunya"
+    ],
+    "prevents": [
+      "Gunakan metode pemangkasan alternatif seperti pemangkasan tertunda atau pemangkasan ganda",
+      "Hindari pemangkasan pada saat hujan deras karena spora kemungkinan besar akan tersebar",
+      "Pantau kebun anggur di musim semi, dan carilah tunas yang mati atau tunas yang kerdil",
+      "Pada musim panas nanti, potonglah bagian tanaman anggur yang terkena kanker",
+      "Singkirkan sisa-sisa penyakit dari kebun anggur dan musnahkan",
+      "Menunda pembuahan selama beberapa tahun hingga tanaman merambat memiliki pertumbuhan akar dan tunas yang seimbang"
     ]
   },
   {
@@ -100,12 +180,30 @@
       "Bercak-bercak kecil basah dengan tepi kuning lemon",
       "Lesi nekrotik berwarna coklat",
       "Pengguguran daun"
+    ],
+    "prevents": [
+      "Gunakan benih bersertifikat dan bebas patogen",
+      "Menanam varietas yang toleran atau tahan",
+      "Periksa tanaman atau lahan Anda apakah ada tanda-tanda penyakit",
+      "Pastikan waktu tanam yang sesuai di area tersebut",
+      "Hindari irigasi sprinkler",
+      "Jaga kebersihan perlengkapan dan perkakas Anda",
+      "Buang atau musnahkan tanaman yang terinfeksi dengan cara membakarnya",
+      "Rotasi tanaman dengan tanaman bukan inang (jagung) dianjurkan pada periode tertentu"
     ]
   },
   {
     "name": "Haunglongbing (Citrus greening)",
     "symptoms": [
       "klorosis atau daunnya menguning, warna tulang daun menjadi hijau tua, daunnya lebih tebal, kaku dan ukurannya menjadi lebih kecil"
+    ],
+    "prevents": [
+      "Gunakan insektisida yang efektif untuk mengurangi populasi kutu loncat yang menyebarkan penyakit ini",
+      "Segera buang dan hancurkan pohon yang terinfeksi untuk mencegah penyebaran penyakit",
+      "Pangkas cabang-cabang yang menunjukkan gejala infeksi",
+      "Periksa kebun secara rutin untuk mendeteksi tanda-tanda awal infeksi, seperti daun menguning dan buah kecil yang tidak normal",
+      "Pilih varietas jeruk yang lebih tahan terhadap Citrus Greening jika tersedia",
+      "Pastikan tanaman mendapatkan nutrisi yang cukup untuk meningkatkan kekebalan terhadap penyakit"
     ]
   },
   {
@@ -115,6 +213,26 @@
       "Membentuk lingkaran di sekitar bagian tengah yang bening",
       "Dikelilingi cincin kuning cerah",
       "Daun menguning dan rontok"
+    ],
+    "prevents": [
+      "Gunakan bibit atau tanaman yang bersertifikat bebas penyakit",
+      "Carilah varietas yang tahan terhadap penyakit",
+      "Tanam atau pindahkan tanaman pada bedengan yang ditinggikan untuk memperbaiki drainase",
+      "Tanam dalam barisan searah dengan arah mata angin dan hindari tempat yang teduh",
+      "Berikan ruang yang cukup di antara tanaman agar bagian atas tanaman cepat kering setelah hujan atau pengairan",
+      "Tutupi tanah dengan mulsa agar tanaman tidak menyentuh tanah",
+      "Waspadai tanda-tanda penyakit, terutama saat cuaca basah",
+      "Buang daun bagian bawah yang terlalu dekat dengan tanah",
+      "Buang semua daun yang menunjukkan gejala penyakit dan musnahkan",
+      "Jaga agar tanaman tetap sehat dan kuat dengan pemupukan yang baik",
+      "Gunakan tiang pancang untuk menjaga tanaman tetap tegak tergantung tanamannya",
+      "Gunakan sistem irigasi tetes untuk meminimalkan lamanya waktu basahnya daun",
+      "Sirami tanaman pada pagi hari agar tanaman mempunyai waktu untuk mengering pada siang hari",
+      "Mengendalikan gulma yang rentan terhadap penyakit di sekitar lahan",
+      "Hindari bekerja di lahan saat tanaman basah",
+      "Setelah panen, singkirkan semua sisa tanaman dan bakar (jangan dijadikan kompos) atau kubur jauh di dalam tanah (lebih dari 45 cm)",
+      "Menanam tanaman yang berbeda-beda di lahan selama dua atau tiga tahun",
+      "Untuk kentang, simpan umbinya di tempat sejuk dengan sirkulasi udara yang baik"
     ]
   },
   {
@@ -129,6 +247,17 @@
       "Lesi ditutupi jamur abu-abu/putih di sisi bawah",
       "Coklat, menggulung, kering",
       "Bintik-bintik coklat berbatas tegas dan lapisan putih pada batang, cabang, tangkai daun"
+    ],
+    "prevents": [
+      "Gunakan benih yang sehat atau tanaman yang lebih toleran",
+      "Pastikan lahan mempunyai ventilasi udara yang baik dan tanah yang memiliki drainase yang baik",
+      "Pantau lahan dan singkirkan tanaman yang terinfeksi dan tanaman di sekitarnya",
+      "Gunakan rotasi dua hingga tiga tahun pada tanaman bukan inang",
+      "Hancurkan inang sukarelawan di dalam dan sekitar lahan",
+      "Hindari pemupukan berlebihan dengan nitrogen",
+      "Gunakan penguat tanaman",
+      "Simpan umbi pada suhu rendah dan ventilasi yang baik",
+      "Hancurkan umbi-umbian dan sisa-sisa tanaman setelah panen, kubur sedalam dua kaki atau berikan kepada hewan"
     ]
   },
   {
@@ -140,6 +269,15 @@
       "Jaringan daun nekrotik, lesi membentuk batas kuning (merah pada varietas anggur merah) antara jaringan sehat dan sakit",
       "Infeksi akhir musim: bintik-bintik berbintik, daun rontok prematur, pengeringan gugusan bunga terinfeksi",
       "Hanya batang buah beri yang terinfeksi, bukan rachis (tidak seperti hawar Botrytis)"
+    ],
+    "prevents": [
+      "Hanya memperoleh bahan tanam dari sumber yang bersertifikat",
+      "Pastikan ada jarak yang cukup di antara tanaman merambat",
+      "Menerapkan tindakan yang meningkatkan sirkulasi udara antar tanaman, misalnya melalui pemangkasan",
+      "Pantau kebun anggur secara teratur untuk mengetahui gejala penyakit",
+      "Menjaga standar kebersihan yang tinggi, misalnya dengan menghilangkan gulma dan sisa tanaman dari kebun anggur",
+      "Hancurkan tanaman anggur yang kering atau terinfeksi dengan cara membakar atau mengubur tanaman tersebut jauh dari kebun anggur",
+      "Pastikan untuk tidak mengangkut sisa sampah pada buah atau mesin yang dipanen antar kebun anggur"
     ]
   },
   {
@@ -149,6 +287,19 @@
       "Bercak hijau zaitun hingga ungu keabu-abuan",
       "Bercak membesar, daun menguning (klorosis) dan coklat (nekrosis)",
       "Daun menggulung, mengering, dan rontok"
+    ],
+    "prevents": [
+      "Gunakan benih bersertifikat, bebas penyakit, varietas yang tahan tanaman atau berketahanan jika tersedia di wilayah Anda",
+      "Tanam lebih awal untuk mengurangi keparahan penyakit",
+      "Sesuaikan jarak baris dan tanaman untuk meningkatkan sirkulasi udara dan mengurangi kelembapan di kanopi",
+      "Pantau penyakit dan tanaman yang terserang hama segera setelah terdeteksi",
+      "Hindari pemupukan nitrogen berlebihan",
+      "Meningkatkan sirkulasi udara di dalam rumah kaca",
+      "Jaga kelembapan relatif di bawah 85% dan suhu malam hari lebih tinggi dibandingkan suhu di luar (cocok untuk rumah kaca)",
+      "Gunakan irigasi tetes dan hindari menyiram dedaunan",
+      "Gunakan tiang, tali, atau pangkas tanaman agar tanaman tetap tegak dan meningkatkan aliran udara di dalam dan sekitarnya",
+      "Buang dan musnahkan (bakar) seluruh sisa tanaman setelah panen",
+      "Sanitasi rumah kaca di antara tanaman dan pertahankan standar kebersihan yang luas terhadap peralatan dan pekerja"
     ]
   },
   {
@@ -156,6 +307,19 @@
     "symptoms": [
       "Bintik-bintik kecil, melingkar, abu-abu basah dengan tepi coklat tua",
       "Membesar, menyatu, dengan titik-titik hitam di tengah"
+    ],
+    "prevents": [
+      "Memperoleh benih bersertifikat bebas penyakit",
+      "Jika tersedia, gunakan varietas yang tahan",
+      "Gunakan mulsa organik atau plastik untuk menghindari penularan dari tanah",
+      "Buang daun yang terserang dan musnahkan",
+      "Meningkatkan sirkulasi udara dan menjauhkan tanaman dari tanah dengan tiang pancang",
+      "Pastikan area produksi bebas dari gulma yang rentan",
+      "Jangan menggunakan alat penyiram atau irigasi overhead lainnya",
+      "Jagalah kebersihan peralatan dan perkakas Anda setelah bekerja di lapangan",
+      "Gali sisa-sisa tanaman jauh di dalam tanah setelah panen",
+      "Cara lainnya, singkirkan dan hancurkan",
+      "Rencanakan rotasi tanaman selama beberapa tahun dengan tanaman yang tidak rentan"
     ]
   },
   {
@@ -163,6 +327,16 @@
     "symptoms": [
       "Bintik-bintik putih hingga kuning di permukaan atas",
       "Berubah warna menjadi perunggu/keperakan, rapuh, robek, rontok"
+    ],
+    "prevents": [
+      "Tanam varietas yang tahan jika tersedia",
+      "Pantau lahan Anda secara teratur dan periksa bagian bawah daun",
+      "Sebagai alternatif, kibaskan beberapa serangga dari permukaan daun ke selembar kertas putih",
+      "Buang daun atau tanaman yang terserang",
+      "Menyingkirkan jelatang dan rumput liar lainnya dari ladang",
+      "Mengalirkan air ke jalan setapak dan area berdebu lainnya secara berkala untuk menghindari kondisi berdebu di lapangan",
+      "Sirami tanaman Anda secara teratur karena pohon dan tanaman yang mengalami stres menjadi kurang toleran terhadap kerusakan akibat tungau laba-laba",
+      "Kendalikan penggunaan insektisida agar serangga yang bermanfaat dapat berkembang biak"
     ]
   },
   {
@@ -173,6 +347,12 @@
       "Lingkaran nekrotik terbentuk di sekitar lesi primer",
       "Bercak target muncul pada daun terendah dan tertua terlebih dahulu",
       "Bercak menyebar ke daun atas seiring waktu"
+    ],
+    "prevents": [
+      "Gunakan varietas unggul untuk menghindari kerusakan ekonomi",
+      "Tanam lebih awal dan dengan varietas yang berumur genjah untuk menghindari puncak serangan",
+      "Bersihkan lahan secara menyeluruh dari sisa tanaman setelah panen",
+      "Rotasi dengan tanaman bukan inang dan hindari monokultur di area yang sama"
     ]
   },
   {
@@ -181,6 +361,19 @@
       "Kerdil, pertumbuhan terhambat",
       "Lebih tebal, keriput, klorosis interveinal",
       "Tekstur kasar, tepi klorosis menggulung ke atas dan ke dalam"
+    ],
+    "prevents": [
+      "Gunakan varietas yang tahan atau toleran",
+      "Tanam lebih awal untuk menghindari puncak populasi kutu kebul",
+      "Tumpang sari dengan barisan tanaman yang tidak rentan seperti labu siam dan mentimun",
+      "Gunakan jaring untuk menutupi persemaian dan mencegah lalat putih mencapai tanaman",
+      "Lakukan rotasi tanaman dengan tanaman yang tidak rentan",
+      "Hindari menanam tanaman inang alternatif di dekat tanaman",
+      "Mulsa persemaian atau lahan untuk memutus siklus hidup kutu kebul",
+      "Gunakan perangkap plastik kuning yang lengket untuk menangkap serangga secara massal",
+      "Pantau lahan, petik sendiri tanaman yang sakit, dan kubur jauh dari lahan",
+      "Menemukan dan memberantas gulma di dalam dan sekitar lahan",
+      "Bajak seluruh sisa tanaman setelah panen atau bakar"
     ]
   },
   {
@@ -189,10 +382,24 @@
       "Bintik-bintik hijau dan kuning atau pola mosaik",
       "Daun muda terdistorsi",
       "Daun tua: area hijau tua menonjol"
+    ],
+    "prevents": [
+      "Gunakan benih dari tanaman sehat atau dari sumber bersertifikat",
+      "Gunakan varietas yang tahan atau toleran",
+      "Gunakan pasteurisasi uap untuk menghilangkan virus dari tanah persemaian Anda",
+      "Jangan menanam di lahan yang sudah terjangkit virus",
+      "Optimalkan penanganan tanaman dengan mencuci tangan, memakai sarung tangan dan mendisinfeksi peralatan dan perlengkapan Anda",
+      "Jangan mengkonsumsi produk tembakau (misalnya rokok) di sekitar tanaman tomat",
+      "Pantau persemaian dan lahan, singkirkan tanaman yang sakit dan bakar",
+      "Menemukan dan memberantas gulma di dalam dan sekitar lahan",
+      "Membajak dan membakar sisa-sisa tanaman setelah panen",
+      "Hindari menanam tanaman inang alternatif di dekat tomat",
+      "Menerapkan rotasi tanaman dengan tanaman bukan inang setidaknya selama dua tahun"
     ]
   },
   {
     "name": "healthy",
-    "symptoms": ["Tumbuhan Anda Sehat"]
+    "symptoms": ["Tumbuhan Anda Sehat"],
+    "prevents": ["Tumbuhan Anda Sehat"]
   }
 ]

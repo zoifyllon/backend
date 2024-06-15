@@ -66,11 +66,15 @@ exports.getHistoryByIdController = async (req, res, next) => {
         id: result.history_id,
         user_id: result.user_id,
         image_url: result.image_url,
-        diseases: result.diseases.map(disease => ({
-          ...disease,
-          percentage: disease.percentage / 100,
-          symptoms: dataJSON[dataJSON.findIndex((d) => d.name === disease.disease)].symptoms
-        })),
+        diseases: result.diseases.map(disease => {
+          const idx = dataJSON.findIndex((d) => d.name === disease.disease);
+          return ({
+            ...disease,
+            percentage: disease.percentage / 100,
+            symptoms: dataJSON[idx].symptoms,
+            prevents: dataJSON[idx].prevents
+          })}
+        ),
       },
     });
   } catch (error) {

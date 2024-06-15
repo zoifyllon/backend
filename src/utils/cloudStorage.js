@@ -54,7 +54,7 @@ ImgUpload.uploadToGcs = (req, res, next) => {
 ImgUpload.deleteFile = async (bucketUrl) => {
   bucketUrl = bucketUrl.split('/')[4] + '/' + bucketUrl.split('/')[5];
 
-  await bucket.file(bucketUrl).delete();
+  if (bucketUrl !== 'profile/default_image.jpg') await bucket.file(bucketUrl).delete();
 }
 
 module.exports = ImgUpload;
