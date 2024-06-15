@@ -53,28 +53,18 @@ exports.registerController = async (req, res, next) => {
     const { name, email, password } = req.body;
     const defaultImgUrl = "https://storage.googleapis.com/zoifyllon-bucket/profile/default_image.jpg"
     const imageUrl = req.file?req.file.cloudStoragePublicUrl:defaultImgUrl;
-<<<<<<< Updated upstream
 
-<<<<<<< Updated upstream
     if (!isEmail(email)){
-      return res.status(400).json({ message: 'email tidak valid' });
+      return res.status(400).json({ 
+        status: 'fail',
+        message: 'email tidak valid' 
+      });
     }
 
-    if (typeof email !== 'string' || typeof name !== 'string' || typeof password !== 'string'  ) {
-      return res.status(400).json({ message: 'field harus berupa string' });
-    }
-=======
-=======
-
->>>>>>> Stashed changes
     if (!email || !name || !password) return res.status(400).json({
       status: 'fail',
       message: 'field tidak boleh kosong'
     });
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
     if (typeof email !== 'string' || typeof name !== 'string' || typeof password !== 'string') return res.status(400).json({
       status: 'fail',
