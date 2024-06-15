@@ -1,14 +1,5 @@
 # backend
 
-## isian .env
-
-```
-DATABASE_URL="mysql://user:password@host:port/database?schema=public"
-PORT=
-PROJECT_ID=
-BUCKET_NAME=
-```
-
 ## instalasi dependensi
 
 ```
