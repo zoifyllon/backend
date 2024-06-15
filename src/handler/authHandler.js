@@ -39,14 +39,14 @@ exports.registerController = async (req, res, next) => {
     const defaultImgUrl = "https://storage.googleapis.com/zoifyllon-bucket/profile/default_image.jpg"
     const imageUrl = req.file?req.file.cloudStoragePublicUrl:defaultImgUrl;
     
-    if (!email || !name || !password) res.status(400).json({ message: 'field tidak boleh kosong' });
+    if (!email || !name || !password) return res.status(400).json({ message: 'field tidak boleh kosong' });
 
     if (typeof email !== 'string' || typeof name !== 'string' || typeof password !== 'string'  ) {
-      res.status(400).json({ message: 'field harus berupa string' });
+      return res.status(400).json({ message: 'field harus berupa string' });
     }
 
     if (email.length > 50 || name.length > 50) {
-      res.status(400).json({ message: 'jumlah karakter melebihi batas maksimal 50' });
+      return res.status(400).json({ message: 'jumlah karakter melebihi batas maksimal 50' });
     }
 
     await verifyUserEmail(email);
