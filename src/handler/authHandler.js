@@ -3,6 +3,21 @@ const { login } = require('../repositories/authRepositories');
 const AuthenticationError = require('../exceptions/AuthenticationError');
 const jwt = require('jsonwebtoken');
 const { verifyUserEmail, addUserRepository } = require('../repositories/usersRepositories');
+const { isEmail } = require('../service/validator');
+
+exports.pingController = async (req, res, next) => {
+  try{
+    res.status(200).json({
+      message: 'Success',
+      data: {
+        app: "backend",
+        server_time: new Date()
+      },
+    });}
+  catch (error) {
+    next(error)
+  }
+}
 
 exports.loginController = async (req, res, next) => {
   try {
@@ -40,6 +55,10 @@ exports.registerController = async (req, res, next) => {
     const imageUrl = req.file?req.file.cloudStoragePublicUrl:defaultImgUrl;
     
     if (!email || !name || !password) return res.status(400).json({ message: 'field tidak boleh kosong' });
+
+    if (!isEmail(email)){
+      return res.status(400).json({ message: 'email tidak valid' });
+    }
 
     if (typeof email !== 'string' || typeof name !== 'string' || typeof password !== 'string'  ) {
       return res.status(400).json({ message: 'field harus berupa string' });
