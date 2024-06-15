@@ -261,6 +261,14 @@ Response Body Error :
     "message": "user not found"
   }
   ```
+- jika userId berbeda dengan loged yang telah masuk
+  ```
+  HTTP Response 403
+  {
+    "status": "fail",
+    "message": "access denied"
+  }
+  ```
 - jika token tidak ada
   ```
   HTTP Response 401
