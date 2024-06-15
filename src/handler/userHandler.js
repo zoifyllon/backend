@@ -34,46 +34,19 @@ exports.putUserController = async (req, res, next) => {
     const { name, password } = req.body;
     const { id } = req.user;
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    if (!name && !password && !req.file) return res.status(400).json({ message: 'salah satu field harus terisi' })
-
-    if (name && name.length > 50) return res.status(400).json({ message: 'jumlah karakter melebihi batas maksimal 50' });
+    if (!name && !password && !req.file) return res.status(400).json({ 
+      status: 'fail',
+      message: 'field tidak boleh kosong'
+     })
 
     if ((name && typeof name !== 'string') || (password && typeof password !== 'string')  ) {
       return res.status(400).json({ message: 'field harus berupa string' });
     }
-=======
-    if (!name || !password) return res.status(400).json({
-      status: 'fail',
-      message: 'field tidak boleh kosong'
-    });
 
-    if (name.length > 50) return res.status(400).json({
+    if (name && name.length > 50) return res.status(400).json({
       status: 'fail',
       message: 'jumlah karakter melebihi batas maksimal 50'
     });
-
-=======
-    if (!name || !password) return res.status(400).json({
-      status: 'fail',
-      message: 'field tidak boleh kosong'
-    });
-
-    if (name.length > 50) return res.status(400).json({
-      status: 'fail',
-      message: 'jumlah karakter melebihi batas maksimal 50'
-    });
-
->>>>>>> Stashed changes
-    if (typeof name !== 'string' || typeof password !== 'string')  return res.status(400).json({
-      status: 'fail',
-      message: 'field harus berupa string'
-    });
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
     const result = await getUserIdRepository(id);
 
