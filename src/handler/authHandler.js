@@ -53,9 +53,9 @@ exports.registerController = async (req, res, next) => {
     const { name, email, password } = req.body;
     const defaultImgUrl = "https://storage.googleapis.com/zoifyllon-bucket/profile/default_image.jpg"
     const imageUrl = req.file?req.file.cloudStoragePublicUrl:defaultImgUrl;
-    
-    if (!email || !name || !password) return res.status(400).json({ message: 'field tidak boleh kosong' });
+<<<<<<< Updated upstream
 
+<<<<<<< Updated upstream
     if (!isEmail(email)){
       return res.status(400).json({ message: 'email tidak valid' });
     }
@@ -63,13 +63,31 @@ exports.registerController = async (req, res, next) => {
     if (typeof email !== 'string' || typeof name !== 'string' || typeof password !== 'string'  ) {
       return res.status(400).json({ message: 'field harus berupa string' });
     }
+=======
+=======
 
-    if (email.length > 50 || name.length > 50) {
-      return res.status(400).json({ message: 'jumlah karakter melebihi batas maksimal 50' });
-    }
+>>>>>>> Stashed changes
+    if (!email || !name || !password) return res.status(400).json({
+      status: 'fail',
+      message: 'field tidak boleh kosong'
+    });
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+
+    if (typeof email !== 'string' || typeof name !== 'string' || typeof password !== 'string') return res.status(400).json({
+      status: 'fail',
+      message: 'field harus berupa string'
+    });
+
+    if (email.length > 50 || name.length > 50) return res.status(400).json({
+      status: 'fail',
+      message: 'jumlah karakter melebihi batas maksimal 50'
+    });
 
     await verifyUserEmail(email);
-    
+
     const hashedPassword = await bcrypt.hash(password, 10);
     const result = await addUserRepository({ name, email, password: hashedPassword, imageUrl });
 

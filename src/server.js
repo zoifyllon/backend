@@ -16,6 +16,11 @@ app.use(authHandler);
 app.use(predictHandler);
 app.use(errorMiddleware);
 
+app.get('/', (req, res, next) => {
+  res.status(200).send('<h1 align="center">hello world</h1>');
+  next();
+});
+
 app.listen(process.env.PORT, () => {
   console.log(`running on port ${process.env.PORT}`)
 });
