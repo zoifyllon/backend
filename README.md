@@ -406,8 +406,8 @@ Response Body Error :
   }
   ```
 
-### GET DETAIL HISTORY
-Endpoint : GET /history/{historyId}
+### DELETE HISTORY
+Endpoint : DELETE /history/{historyId}
 
 Headers:
 - Authorization: token
