@@ -13,32 +13,32 @@ To install and run the Zoifyllon API on your local machine, follow these steps:
 
 1. **Clone the Repository**
 
-```
-git clone https://github.com/zoifyllon/backend.git
-``` 
+  ```
+  git clone https://github.com/zoifyllon/backend.git
+  ``` 
 
 3. **Dependencies Installation**
 
-```
-npm install
-```
+  ```
+  npm install
+  ```
 
-3. ** Database Migrate**
+3. **Database Migrate**
 
-```
-npx prisma migrate dev
-```
+  ```
+  npx prisma migrate dev
+  ```
 
 4. **Run the Application**
 
-- Development
-  ```
-  npm run start-dev
-  ```
-- Production
-  ```
-  npm run start
-  ```
+  - Development
+    ```
+    npm run start-dev
+    ```
+  - Production
+    ```
+    npm run start
+    ```
 
 # API Documentation
 
