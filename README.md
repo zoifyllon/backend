@@ -27,4 +27,4 @@ npx prisma migrate dev
 
 [API Documentation](API%20Documentation.md)
 
-> **_NOTE:_** You must run [detectAPI]https://github.com/zoifyllon/detectAPI to use the Model Prediction
+> **_NOTE:_** You must run [detectAPI](https://github.com/zoifyllon/detectAPI) to use the Model Prediction
