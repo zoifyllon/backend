@@ -1,18 +1,18 @@
 # backend
 
-## instalasi dependensi
+## Dependencies Installation
 
 ```
 npm install
 ```
 
-## migrasi database
+## Database Migrate
 
 ```
 npx prisma migrate dev
 ```
 
-## menjalankan aplikasi
+## Run the Application
 
 - Development
   ```
