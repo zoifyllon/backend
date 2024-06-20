@@ -26,6 +26,8 @@ npx prisma migrate dev
 
 # API Documentation
 
+[API Documentation](API%20Documentation.md)
+
 ## AUTHENTICATION ENDPOINT
 ### REGISTER
 Endpoint : POST /auth/register
